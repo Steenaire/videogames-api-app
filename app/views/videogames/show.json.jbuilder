@@ -1,1 +1,0 @@
-json.partial! 'videogame.json.jbuilder', videogame: @videogame

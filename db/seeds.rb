@@ -1,0 +1,7 @@
+Videogame.create(name: "Morrowind", release_date: Date.today, genre: "Fantasy", gameplay: "RPG", steen_rating: 10)
+Videogame.create(name: "Skyrim", release_date: Date.today, genre: "Fantasy", gameplay: "RPG", steen_rating: 8)
+Videogame.create(name: "Team Fortess 2", release_date: Date.today, genre: "Action", gameplay: "FPS", steen_rating: 8)
+Videogame.create(name: "Portal", release_date: Date.today, genre: "SciFi", gameplay: "FP/Puzzle", steen_rating: 10)
+Videogame.create(name: "Mario 3", release_date: Date.today, genre: "Fantasy", gameplay: "Platformer", steen_rating: 7)
+Videogame.create(name: "Dungeon Keeper 2", release_date: Date.today, genre: "Fantasy", gameplay: "RTS", steen_rating: 10)
+Videogame.create(name: "Final Fantasy 7", release_date: Date.today, genre: "Fantasy", gameplay: "RPG", steen_rating: 8)

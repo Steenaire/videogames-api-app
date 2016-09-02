@@ -1,0 +1,15 @@
+<div ng-app="app">
+  <div ng-controller="videogamesCtrl" ng-init="setup()">
+    <div ng-repeat="videogame in videogames">
+      <p ng-click="videogame.visibility = !videogame.visibility">
+      Name: {{videogame.name}}-
+        <span ng-show="videogame.visibility">
+        Release Date: {{videogame.release_date}}-
+        Genre: {{videogame.genre}}-
+        Gameplay: {{videogame.gameplay}}-
+        Steen Rating: {{videogame.steen_rating}}
+        </span>
+      </p>
+    </div>
+  </div>
+</div>

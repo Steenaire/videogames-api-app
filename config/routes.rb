@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/', to: 'videogames#index'
+  
   namespace :api do
     namespace :v1 do
       get '/videogames', to: 'videogames#index'

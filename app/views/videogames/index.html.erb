@@ -5,21 +5,21 @@
       <p ng-click="videogame.visibility = !videogame.visibility">
         {{videogame.name}}
         <span ng-show="videogame.visibility">
-        Release Date: {{videogame.release_date}}
+        Release Date: {{videogame.release_date}} 
         Genre: {{videogame.genre}}
         Gameplay: {{videogame.gameplay}}
         Steen Rating: {{videogame.steen_rating}}
         </span>
+        <span>
+          <p>Edit Videogame:</p>
+          <p>Name: <input ng-model="name"></p>
+          <p>Genre: <input ng-model="genre"></p>
+          <p>Gameplay: <input ng-model="gamePlay"></p>
+          <p>Steen Rating: <input ng-model="steenRating"></p>
+          <p>Release Date: <input ng-model="releaseDate"></p>
+          <button ng-click="editVideogame(videogame,$index,name,releaseDate,gamePlay,steenRating,genre)">Edit Videogame</button>
+        </span>
       </p>
-      <span>
-        <p>Edit Videogame:</p>
-        <p>Name: <input ng-model="name"></p>
-        <p>Genre: <input ng-model="genre"></p>
-        <p>Gameplay: <input ng-model="gamePlay"></p>
-        <p>Steen Rating: <input ng-model="steenRating"></p>
-        <p>Release Date: <input ng-model="releaseDate"></p>
-        <button ng-click="editVideogame(videogame,$index,name,releaseDate,gamePlay,steenRating,genre)">Edit Videogame</button>
-      </span>
     </div>
     <div>
       <p>New Videogame:</p>

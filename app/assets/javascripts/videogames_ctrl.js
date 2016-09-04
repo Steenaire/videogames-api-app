@@ -18,7 +18,7 @@
 
 
             $http.post("/api/v1/videogames.json", videogameData).then(function(response) {
-                $scope.videogames.push(videogameData);
+                $scope.videogames.push(response.data);
             });
         }
 
@@ -41,7 +41,7 @@
                 gameplay: gameplay,
                 steen_rating: steenRating,
                 genre: genre,
-                id: videogameId
+                id: videogame.id
             };
 
             $scope.videogames.splice(index,1);

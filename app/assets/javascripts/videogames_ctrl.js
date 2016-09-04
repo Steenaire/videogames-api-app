@@ -31,9 +31,9 @@
             $http.delete("/api/v1/videogames/"+videogameId);
         }
 
-        $scope.editVideogame = function(videogame,name,releaseDate,gameplay,steenRating,genre) {
+        $scope.editVideogame = function(videogame,index,name,releaseDate,gameplay,steenRating,genre) {
 
-            var videogameId = videogame.id
+            var videogameId = videogame.id;
 
             var videogameData = {
                 name: name,
@@ -44,7 +44,11 @@
                 id: videogameId
             };
 
+            $scope.videogames.splice(index,1);
+            $scope.videogames.push(videogameData);
+
             $http.patch("/api/v1/videogames/"+videogameId,videogameData);
+
         }
     });
 })();

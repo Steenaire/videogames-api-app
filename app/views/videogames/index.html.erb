@@ -2,14 +2,23 @@
   <div ng-controller="videogamesCtrl" ng-init="setup()">
     <div ng-repeat="videogame in videogames">
       <p ng-click="videogame.visibility = !videogame.visibility">
-      Name: {{videogame.name}}-
+        {{videogame.name}}
         <span ng-show="videogame.visibility">
-        Release Date: {{videogame.release_date}}-
-        Genre: {{videogame.genre}}-
-        Gameplay: {{videogame.gameplay}}-
+        Release Date: {{videogame.release_date}}
+        Genre: {{videogame.genre}}
+        Gameplay: {{videogame.gameplay}}
         Steen Rating: {{videogame.steen_rating}}
         </span>
       </p>
+    </div>
+    <div>
+      <p>New Videogame:</p>
+      <p>Name: <input ng-model="name"></p>
+      <p>Genre: <input ng-model="genre"></p>
+      <p>Gameplay: <input ng-model="gamePlay"></p>
+      <p>Steen Rating: <input ng-model="steenRating"></p>
+      <p>Release Date: <input ng-model="releaseDate"></p>
+      <button ng-click="newVideogame(name,releaseDate,gamePlay,steenRating,genre)">Add Videogame</button>
     </div>
   </div>
 </div>

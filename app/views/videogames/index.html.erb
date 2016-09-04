@@ -12,12 +12,12 @@
         </span>
         <span>
           <p>Edit Videogame:</p>
-          <p>Name: <input ng-model="name"></p>
-          <p>Genre: <input ng-model="genre"></p>
-          <p>Gameplay: <input ng-model="gamePlay"></p>
-          <p>Steen Rating: <input ng-model="steenRating"></p>
-          <p>Release Date: <input ng-model="releaseDate"></p>
-          <button ng-click="editVideogame(videogame,$index,name,releaseDate,gamePlay,steenRating,genre)">Edit Videogame</button>
+          <p>Name: <input ng-model="videogame.name"></p>
+          <p>Genre: <input ng-model="videogame.genre"></p>
+          <p>Gameplay: <input ng-model="videogame.gameplay"></p>
+          <p>Steen Rating: <input ng-model="videogame.steen_rating"></p>
+          <p>Release Date: <input ng-model="videogame.release_date"></p>
+          <button ng-click="editVideogame(videogame,$index,videogame.name,videogame.release_date,videogame.gameplay,videogame.steen_rating,videogame.genre)">Edit Videogame</button>
         </span>
       </p>
     </div>

@@ -11,8 +11,11 @@ class Api::V1::VideogamesController < ApplicationController
 
   def create
     @videogame = Videogame.new(name: params[:name], release_date: params[:release_date], genre: params[:genre], gameplay: params[:gameplay], steen_rating: params[:steen_rating])
-    @videogame.save
-    render :show
+    if @videogame.save
+      render :show
+    else
+      render json: {errors: @videogame.errors.full_messages}, status: 422 #Need this to handle errors from angular
+    end
   end
 
   def update
@@ -24,6 +27,6 @@ class Api::V1::VideogamesController < ApplicationController
 
   def destroy
     @videogame = Videogame.find_by(id: params[:id]).destroy
-    render :show
+    render json: {message:"Videogame Destroyed"}
   end
 end

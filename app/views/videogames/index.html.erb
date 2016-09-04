@@ -30,5 +30,8 @@
       <p>Release Date: <input ng-model="releaseDate"></p>
       <button ng-click="newVideogame(name,releaseDate,gamePlay,steenRating,genre)">Add Videogame</button>
     </div>
+    <div ng-repeat="error in errors" >
+      <p>{{error}}</p>
+    </div>
   </div>
 </div>

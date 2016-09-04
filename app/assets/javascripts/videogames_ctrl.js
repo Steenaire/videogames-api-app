@@ -4,6 +4,8 @@
         $scope.setup = function() {
             $http.get("/api/v1/videogames.json").then(function(response) {
                 $scope.videogames = response.data;
+            }, function(error) {
+                console.log("sad path");
             });
         }
 
@@ -19,6 +21,8 @@
 
             $http.post("/api/v1/videogames.json", videogameData).then(function(response) {
                 $scope.videogames.push(response.data);
+            }, function(error) {
+                $scope.errors = error.data.errors;
             });
         }
 
@@ -26,9 +30,11 @@
 
             var videogameId = videogame.id;
 
-            $scope.videogames.splice(videogameIndex,1);
+            
 
-            $http.delete("/api/v1/videogames/"+videogameId);
+            $http.delete("/api/v1/videogames/"+videogameId).then(function(response) {
+                $scope.videogames.splice(videogameIndex,1);
+            });
         }
 
         $scope.editVideogame = function(videogame,index,name,releaseDate,gameplay,steenRating,genre) {

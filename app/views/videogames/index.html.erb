@@ -1,6 +1,7 @@
 <div ng-app="app">
   <div ng-controller="videogamesCtrl" ng-init="setup()">
     <div ng-repeat="videogame in videogames">
+      <p ng-click="deleteVideogame($index,videogame)">X</p>
       <p ng-click="videogame.visibility = !videogame.visibility">
         {{videogame.name}}
         <span ng-show="videogame.visibility">
@@ -10,6 +11,15 @@
         Steen Rating: {{videogame.steen_rating}}
         </span>
       </p>
+      <span>
+        <p>Edit Videogame:</p>
+        <p>Name: <input ng-model="name"></p>
+        <p>Genre: <input ng-model="genre"></p>
+        <p>Gameplay: <input ng-model="gamePlay"></p>
+        <p>Steen Rating: <input ng-model="steenRating"></p>
+        <p>Release Date: <input ng-model="releaseDate"></p>
+        <button ng-click="editVideogame(videogame,name,releaseDate,gamePlay,steenRating,genre)">Edit Videogame</button>
+      </span>
     </div>
     <div>
       <p>New Videogame:</p>

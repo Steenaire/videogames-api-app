@@ -26,14 +26,16 @@
             });
         }
 
-        $scope.deleteVideogame = function(videogameIndex,videogame) {
+        $scope.deleteVideogame = function(videogame) {
 
             var videogameId = videogame.id;
-
             
 
             $http.delete("/api/v1/videogames/"+videogameId).then(function(response) {
+                var videogameIndex = $scope.videogames.indexOf(videogame);
                 $scope.videogames.splice(videogameIndex,1);
+            }, function(error) {
+                $scope.deleteErrors = error.data.errors;
             });
         }
 
@@ -55,6 +57,14 @@
 
             $http.patch("/api/v1/videogames/"+videogameId,videogameData);
 
+        }
+
+        $scope.toggleByAttribute = function(attribute) {
+            if (attribute == $scope.orderAttribute) {
+                $scope.descending = !$scope.descending
+            } else {
+                $scope.orderAttribute = attribute;
+            }
         }
     });
 })();

@@ -1,8 +1,17 @@
 <div ng-app="app">
   <div ng-controller="videogamesCtrl" ng-init="setup()">
-    Name Filter: <input ng-model="nameFilter">
-    <div ng-repeat="videogame in videogames | filter: {name: nameFilter}">
-      <p ng-click="deleteVideogame($index,videogame)">X</p>
+    <div>
+      Name Filter: <input ng-model="nameFilter">
+      Steen Rating: <input ng-model="steenFilter">
+    </div>
+
+    <div>
+      <button ng-click="toggleByAttribute('name')">Sort By Name</button>
+    </div>
+
+    <div ng-repeat="videogame in videogames | filter: {name: nameFilter, steen_rating: steenFilter} | orderBy:orderAttribute:descending">
+
+      <p ng-click="deleteVideogame(videogame)">X</p>
       <p ng-click="videogame.visibility = !videogame.visibility">
         {{videogame.name}}
         <span ng-show="videogame.visibility">

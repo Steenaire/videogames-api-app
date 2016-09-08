@@ -62,8 +62,138 @@
         $scope.toggleByAttribute = function(attribute) {
             if (attribute == $scope.orderAttribute) {
                 $scope.descending = !$scope.descending
+                if ($scope.descending) {
+                    if (attribute == "name") {
+                        $scope.nameArrow = "^";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "release_date") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "^";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "gameplay") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "^";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "steen_rating") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "^";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "genre") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "^";
+                    }
+                } else {
+                    if (attribute == "name") {
+                        $scope.nameArrow = "v";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "release_date") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "v";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "gameplay") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "v";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "steen_rating") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "v";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "genre") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "v";
+                    }
+                }
             } else {
                 $scope.orderAttribute = attribute;
+                if ($scope.descending) {
+                    if (attribute == "name") {
+                        $scope.nameArrow = "^";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "release_date") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "^";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "gameplay") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "^";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "steen_rating") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "^";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "genre") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "^";
+                    }
+                } else {
+                    if (attribute == "name") {
+                        $scope.nameArrow = "v";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "release_date") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "v";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "gameplay") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "v";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "steen_rating") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "v";
+                        $scope.genreArrow = "";
+                    } else if (attribute == "genre") {
+                        $scope.nameArrow = "";
+                        $scope.releaseDateArrow = "";
+                        $scope.gameplayArrow = "";
+                        $scope.steenRatingArrow = "";
+                        $scope.genreArrow = "v";
+                    }
+                }
             }
         }
     });

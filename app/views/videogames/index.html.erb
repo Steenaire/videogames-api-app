@@ -1,6 +1,7 @@
 <div ng-app="app">
   <div ng-controller="videogamesCtrl" ng-init="setup()">
-    <div ng-repeat="videogame in videogames">
+    Name Filter: <input ng-model="nameFilter">
+    <div ng-repeat="videogame in videogames | filter: {name: nameFilter}">
       <p ng-click="deleteVideogame($index,videogame)">X</p>
       <p ng-click="videogame.visibility = !videogame.visibility">
         {{videogame.name}}

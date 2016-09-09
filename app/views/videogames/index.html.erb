@@ -50,6 +50,7 @@
     </datalist>
     <input ng-model="nameFilter" list="names">
 
+    <steens></steens>
 
     <table style="width:100%">
       <tr>
@@ -66,7 +67,7 @@
         <td>{{videogame.genre}}</td>
         <td>{{videogame.gameplay}}</td>
         <td>{{videogame.steen_rating}}</td>
-        <td><span ng-click="deleteVideogame(videogame)">X</span></td>
+        <td><button ng-click="deleteVideogame(videogame)">X</button></td>
       </tr>
     </table>
 

@@ -48,9 +48,8 @@
     <datalist id="names">
       <option ng-repeat="videogame in videogames">{{videogame.name}}</option>
     </datalist>
-    Filter by name: <input ng-model="nameFilter" list="names">
+    <input ng-model="nameFilter" list="names">
 
-    <!-- <input ng-model="mySearch" ng-keyup="searchVideogames(mySearch)"> -->
 
     <table style="width:100%">
       <tr>

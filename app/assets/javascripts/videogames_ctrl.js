@@ -59,6 +59,12 @@
 
         }
 
+        $scope.searchVideogames(search) {
+            $http.get("/api/v1/videogames.json").then(function(response) {
+                $scope.videogames = response.data;
+            }
+        }
+
         $scope.toggleByAttribute = function(attribute) {
             if (attribute == $scope.orderAttribute) {
                 $scope.descending = !$scope.descending

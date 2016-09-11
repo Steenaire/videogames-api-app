@@ -84,5 +84,26 @@
       <p>{{error}}</p>
     </div>
 
+    <!-- ..................................................................... -->
+
+    <table style="width:100%">
+      <tr>
+        <th ng-click="toggleByAttribute('name')">Name {{nameArrow}}</th>
+        <th ng-click="toggleByAttribute('release_date')">Release Date {{releaseDateArrow}}</th> 
+        <th ng-click="toggleByAttribute('genre')">Genre {{genreArrow}}</th>
+        <th ng-click="toggleByAttribute('gameplay')">Gameplay {{gameplayArrow}}</th>
+        <th ng-click="toggleByAttribute('steen_rating')">Steen Rating {{steenRatingArrow}}</th>
+        <th>Delete?</th>
+      </tr>
+      <tr ng-repeat="videogame in videogames | steen | orderBy:orderAttribute:descending">
+        <td>{{videogame.name}}</td>
+        <td>{{videogame.release_date}}</td> 
+        <td>{{videogame.genre}}</td>
+        <td>{{videogame.gameplay}}</td>
+        <td>{{videogame.steen_rating}}</td>
+        <td><button ng-click="deleteVideogame(videogame)">X</button></td>
+      </tr>
+    </table>
+
   </div>
 </div>
